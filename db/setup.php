@@ -21,7 +21,7 @@ if (!$mysqli->query("DROP TABLE IF EXISTS users") ||
     return;
 }
 if (!$mysqli->query("DROP TABLE IF EXISTS chat") ||
-    !$mysqli->query("CREATE TABLE chat(time TIMESTAMP, user1 VARCHAR(32), user2 VARCHAR(32), text VARCHAR(256))")) {
+    !$mysqli->query("CREATE TABLE chat(id int NOT NULL AUTO_INCREMENT, time TIMESTAMP, user1 VARCHAR(32), user2 VARCHAR(32), text VARCHAR(256))")) {
     echo "Table creation failed: (" . $mysqli->errno . ") " . $mysqli->error;
     return;
 }
