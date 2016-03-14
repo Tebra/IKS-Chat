@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,70 +16,77 @@
 
     <!-- Custom styles for this template -->
     <link href="jumbotron.css" rel="stylesheet">
-  </head>
+</head>
 
-  <body>
+<body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Simple Chat</a>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Simple Chat</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="list.html">List</a>
+                    </li>
+                </ul>
+            </div>
+            <!--/.navbar-collapse -->
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-           <li><a href="list.html"></a></li>
-            </ul>
-        </div><!--/.navbar-collapse -->
-      </div>
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
-      <div class="container">
-        <h2>Chat!</h2>
-        <p>Chat by entering your chat message below and clicking on enter.</p>
-      </div>
+        <div class="container">
+            <h2>Chat!</h2>
+            <p>Chat by entering your chat message below and clicking on enter.</p>
+        </div>
     </div>
 
     <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-12">
-			<table class="table table-striped">
-				<tbody>
-					
-				</tbody>
-			</table>
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
         </div>
-      </div>
-        
-	<nav class="navbar navbar-default navbar-fixed-bottom" style="margin-top:30px">
-		  <div class="container">
-			<form class="navbar-form">
-				<div class="form-group">
-					<input id="chatText" type="text" placeholder="Text" class="form-control">
-				</div>
-				<button id="sendButton" type="submit" class="btn btn-success">Send</button>
-			</form>
-		  </div>
-		</nav>   
-	</div> <!-- /container -->
+
+        <nav class="navbar navbar-default navbar-fixed-bottom" style="margin-top:30px">
+            <div class="container">
+                <form class="navbar-form">
+                    <div class="form-group">
+                        <input id="chatText" type="text" placeholder="Text" class="form-control">
+                    </div>
+                    <button id="sendButton" type="submit" class="btn btn-success">Send</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script>
+        window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
     <script src="bootstrap-3.3.6/dist/js/bootstrap.min.js"></script>
-	
-	<script src="script.js"></script>
 
-  </body>
+    <script src="script.js"></script>
+
+</body>
+
 </html>
