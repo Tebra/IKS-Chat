@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    
     $('#loginButton').click(function () {
         var username = $('#username').val();
         $.getJSON("ajax/login.php", {
@@ -61,7 +61,6 @@ $(document).ready(function () {
         });
     }
 
-
     //Gets all Chats between the activeUser and the targetUser
     //and appends them to the table
     function getChats(activeUser, targetUser) {
@@ -72,9 +71,6 @@ $(document).ready(function () {
         }, function (data) {
             $(function () {
                 $.each(data, function (i, item) {
-                    
-                    
-                    
                     var $tr = $('<tr>').append(
                             $('<td>').text(item.user1 + " sagte(" + item.time + "):"))
                         .append($('<td>').text(item.text));
@@ -85,7 +81,6 @@ $(document).ready(function () {
             localStorage.setItem('lastUpdate', data[data.length - 1].id);
         });
     }
-
 
     // Gets the last Chat message that hasn't been loaded yet.
     // Checks if the Id of the JSON responses match. 
