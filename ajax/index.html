@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Test</title>
+</head>
+
+<body>
+
+<h1>Introduction</h1>
+The following services can be used to implement the HTW Communicator. For data exchange 
+JSON is used.
+<h1>Service login.php</h1>
+<h2>Description</h2>
+The login-Service is used to register a user/password.
+<h2>Parameter</h2>
+<dl>
+	<dt>user</dt>
+	<dd>The name of the user to be logged in.</dd>
+	<dt>password</dt>
+	<dd>The password of the user to be logged in.</dd>
+</dl>
+<h2>Result</h2>
+The result is either true or a descriptive error message.
+<h2>Test</h2>
+<div>
+	<form action="login.php" method="get">
+		<div>
+			<label for="user">user:</label> <input name="user" type="text" />
+		</div>
+		<div>
+			<label for="password">password:</label>
+			<input name="password" type="password" /> </div>
+		<input name="login" type="submit" value="login.php" />
+	</form>
+</div>
+<hr />
+<h1>Service users.php</h1>
+<h2>Description</h2>
+The users-Service lists all registered users.
+<h2>Parameter</h2>
+<dl>
+	no parameter
+</dl>
+<h2>Result</h2>
+The result is an array of user names.
+<h2>Test</h2>
+<div>
+	<form action="users.php" method="get">
+		<input name="users" type="submit" value="users.php" />
+	</form>
+</div>
+<hr />
+<h1>Service chat.php</h1>
+<h2>Description</h2>
+The chat-Service is used to send a text from an user to another.
+<h2>Parameter</h2>
+<dl>
+	<dt>user1</dt>
+	<dd>The name of the user who sends the text.</dd>
+	<dt>user2</dt>
+	<dd>The name of the user who receives the text.</dd>
+	<dt>text</dt>
+	<dd>The text to send.</dd>
+</dl>
+<h2>Result</h2>
+The result is either true or a descriptive error message.
+<h2>Test</h2>
+<div>
+	<form action="chat.php" method="get">
+		<div>
+			<label for="user1">user1:</label><input name="user1" type="text" />
+		</div>
+		<div>
+			<label for="user2">user2:</label> <input name="user2" type="text" />
+		</div>
+		<div>
+			<label for="text">text:</label><input name="text" type="text" />
+		</div>
+		<div>
+			<input name="chat" type="submit" value="chat.php" /> </div>
+	</form>
+</div>
+<hr />
+<h1>Service chats.php</h1>
+<h2>Description</h2>
+The chats-Service lists all available chat entries exchanges between two users.
+<h2>Parameter</h2>
+<dl>
+	<dt>user1</dt>
+	<dd>The name of one of the users.</dd>
+	<dt>user2</dt>
+	<dd>The name of the other user.</dd>
+</dl>
+<h2>Result</h2>
+The result is a list of chat entries. Example:
+<pre>
+ [
+   { "time":"2012-05-01 13:42:17","user1":"333","user2":"Fritzli","text":"Hallo Fritzli"},
+   { "time":"2012-05-01 13:42:45","user1":"Fritzli","user2":"333","text":"Hallo 333"},
+ ]
+</pre>
+<h2>Test</h2>
+<div>
+	<form action="chats.php" method="get">
+		<div>
+			<label for="user1">user1:</label><input name="user1" type="text" />
+		</div>
+		<div>
+			<label for="user2">user2:</label><input name="user2" type="text" /> </div>
+		<div>
+			<input name="chats" type="submit" value="chats.php" />
+		</div>
+	</form>
+</div>
+
+</body>
+
+</html>
