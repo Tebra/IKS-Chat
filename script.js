@@ -69,13 +69,11 @@ $(document).ready(function () {
             user1: activeUser,
             user2: targetUser
         }, function (data) {
-            $(function () {
-                $.each(data, function (i, item) {
-                    var $tr = $('<tr>').append(
-                            $('<td>').text(item.user1 + " sagte(" + item.time + "):"))
-                        .append($('<td>').text(item.text));
-                    $('table').find('tbody').append($tr);
-                });
+            $.each(data, function (i, item) {
+                var tr = $('<tr>').append(
+                        $('<td>').text(item.user1 + " sagte(" + item.time + "):"))
+                    .append($('<td>').text(item.text));
+                $('table').find('tbody').append(tr);
             });
 
             localStorage.setItem('lastUpdate', data[data.length - 1].id);
